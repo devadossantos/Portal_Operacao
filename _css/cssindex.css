@@ -1,0 +1,96 @@
+
+/* RESET CSS*/ 
+*{
+    margin: 0;
+}
+body{
+    background-image:url(/_imagens/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow-x:hidden;
+
+}
+/* CLASSES GRID*/ 
+.main{
+    grid-area: login;
+}
+.aside{
+    grid-area: orientacao;
+}
+/* BOX LOGIN */ 
+.container{
+    display: grid;
+    grid-template-columns: 350px 250px;
+    grid-template-rows: 500px;
+    grid-template-areas: 
+    "login orientacao";
+    border: 3px solid #ff8300;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 70px;
+    box-shadow: 1px 1px 1px 4px rgba(255, 250, 250, 0.205);
+    background-color: #e1eff6;
+    border-radius: 12px;  
+}
+.box_login{
+    margin: 0 auto;
+    margin-top: 50px;
+ 
+}
+.box_login img{
+    width: 150px;
+    margin-left: 30px;
+}
+.box_2{
+ background-image: url(/_imagens/index.png);
+}
+.tela_login_password label{
+    display: block;
+    text-align: center;
+    padding: 1px;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.tela_login_password input{
+    display: block;
+   border-radius: 15px;
+   height: 25px;
+   width: 200px;   
+   font-size: 15px;
+   margin-top: 15px;
+   margin: 0 auto;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+}
+.notificacao{
+    margin-top: -125px;
+    margin-left: 70px;
+}
+.esqueci_senha{ 
+    margin-left: 45px;
+    text-decoration: none;
+    color: black;
+}
+.novo_usuario{
+    width: 100px;
+    height: 100px;
+    margin-left: 85px;
+    margin-top: 200px;
+}
+.novo_usuario img {
+    width: 60px;
+    height: 55px;
+    margin-left: 15px;
+}
+.novo_usuario p{
+font-weight: bolder;
+}
+.rodape{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 55px;
+}

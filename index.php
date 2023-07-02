@@ -53,5 +53,8 @@ session_start();
     <div class="rodape">
       <p> 2023 EQUIPE DEV NATA-BA</p>
    </div>
+   <script>
+       window.alert('Olá visitante, voce está acessando um prototipo de portal de acesso, o mesmo não está em operação.  Duvidas: Anisio 71 986434831')
+   </script>
 </body>
 </html>

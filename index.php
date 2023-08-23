@@ -2,59 +2,47 @@
 session_start();
  
 ?>             
-          
-<!DOCTYPE html>
+        
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/_css/cssindex.css">
-    <link href="/_ico/favicon.ico" rel="shortcut icon">
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">   <!-- fonte Google -->
-    <title>Login - NATA-BA - Portal de triagem </title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portal NATA-BA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
-<body>
-    <div class="container">
-
-    <?php
-        if(isset($_SESSION['nao_autenticado'])):
-        ?>
-
-        <div class="notificacao">
-         <p>USUARIO/SENHA INVALIDO</p> 
+  <body>
+        <div class="container">
+            <div class="alinhamento row justify-content-center mt-xl-5 mt-2">
+                <div class="col-xl-3 pt-xl-4 pt-xxl-0 col-xxl-3">
+                    <div class="row align-items-center justify-content-center "> <!-- Removed w-50 -->
+                        <img class="col" src="/assets/img/121088755_682100212408572_1461982185446243224_n.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-4 col-xxl-4">
+                    <div class="card">
+                        <div class="card-header">Login - Portal NATA-BA</div>
+                        <div class="card-body">
+                          <form action="login.php" method="POST">
+                                <div class="form-group pt-2 pb-2">
+                                    <label class="pb-3" for="usuario">Usuário:</label>
+                                    <input type="text" class="form-control"  id="usuario" name="usuario" placeholder="Digite seu nome de usuário">
+                                </div>
+                                <div class="form-group pt-2 pb-2">
+                                    <label class="pb-3" for="senha ">Senha:</label>
+                                    <input type="password" class="form-control" id="senha" name="senha" placeholder="Digite sua senha">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Entrar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <?php
-        endif;
-        unset($_SESSION['nao_autenticado']);
-        ?>
-
-    <div class="box_login main">
-       <img src="/_imagens/user.png">
-       <div class="tela_login_password">
-        <form action="login.php" method="POST">
-            <label class="label" for="usuario">Usuario</label>
-            <input type="usuario" name="usuario" id="usuario" autofocus="">
-            <label class="label"for="password">Senha</label>
-            <input type="password" name="senha" id="senha" >
-            <a class="esqueci_senha" href="./esqueciasenha.php">Esqueceu a senha?</a> 
-            <input class="botao" type="submit" value="Login">
-        </form>
-      </div>
-      </div>
-    <div class="box_2 aside">
-        <div class="novo_usuario">
-        <a href="./cadastro.php"> <img src="/_imagens/newuser.png" alt="novo_usuario"></a>
-    <p>Novo usuario</p>
-    </div>
-    </div>
-  </div>
-    <div class="rodape">
-      <p> 2023 EQUIPE DEV NATA-BA</p>
-   </div>
-   <script>
-       window.alert('Olá visitante, voce está acessando um prototipo de portal de acesso, o mesmo não está em operação.  Duvidas: Anisio 71 986434831')
-   </script>
-</body>
+        </div>
+        <footer class="text-center text-lg-start bg-light text-muted  fixed-bottom">
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+              2023 Desenvolvido por:
+              <a class="text-reset fw-bold" href="https://mdbootstrap.com/">@Devadossantos</a>
+            </div>
+          </footer>
+  </body>
 </html>

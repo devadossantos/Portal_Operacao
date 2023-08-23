@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Recuperar os dados do formulário
   $status = $_POST['status'];
   $detalhes = $_POST['detalhes'];
+  $observacao =  $_POST['observacao'];
   $especialista_responsavel = $_POST['especialista_responsavel'];
 
   // Atualizar o banco de dados com os novos dados
@@ -38,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     die("Falha na conexão: " . $conn->connect_error);
   }
 
-  $sql_update = "UPDATE triagem_table SET status = '$status', detalhes = '$detalhes', especialista_responsavel = '$especialista_responsavel' WHERE id = $triagem_id";
+  $sql_update = "UPDATE triagem_table SET status = '$status', detalhes = '$detalhes', observacao = '$observacao', especialista_responsavel = '$especialista_responsavel' WHERE id = $triagem_id";
 
   if ($conn->query($sql_update) === TRUE) {
     // Atualização bem-sucedida, redirecionar de volta à lista de triagem
@@ -53,40 +54,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Triagem - NATA</title>
-  <!-- Add the Bootstrap CSS link -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/_css/lista_triagem.css">
+    <title>Editar Dados</title>
 </head>
 <body>
-  <div class="container mt-4">
-    <h2>Triagem - NATA</h2>
+    <h1>Editar Dados da Tabela Triagem</h1>
     <form method="POST">
-      <div class="form-group">
-        <label for="status">Status:</label>
-        <input type="text" class="form-control" name="status" id="status" required>
-      </div>
-      <div class="form-group">
-        <label for="detalhes">Detalhes:</label>
-        <textarea class="form-control" name="detalhes" id="detalhes" rows="4" required></textarea>
-      </div>
-      <div class="form-group">
+        
         <label for="especialista_responsavel">Especialista Responsável:</label>
-        <input type="text" class="form-control" name="especialista_responsavel" id="especialista_responsavel" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Salvar</button>
-      <a href="/fila_triagem.php" class="btn btn-secondary">Voltar para triagem</a>
-    </form>
-  </div>
+        <input type="text" id="especialista_responsavel" name="especialista_responsavel" required><br><br>
 
-  <!-- Add the Bootstrap JS and jQuery scripts (recommended at the end of the body) -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option value="Em Andamento">Em Andamento</option>
+            <option value="Concluído">Concluído</option>
+            <option value="Pendente">Pendente</option>
+            <option value="Cancelado">Cancelado</option>
+        </select><br><br>
+
+        <label for="detalhes">Detalhes:</label><br>
+        <textarea id="detalhes" name="detalhes" rows="4" cols="50"></textarea><br><br>
+
+        <label for="observacao">Observação:</label><br>
+        <textarea id="observacao" name="observacao" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Salvar">
+    </form>
 </body>
 </html>

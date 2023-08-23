@@ -11,13 +11,14 @@ include('verifica_login.php');
     <title>Portal NATA-BA - Consultar triagem</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="/_ico/favicon.ico" rel="shortcut icon">
   </head>
   <body>
 
 <header class="cabecalho">
     <nav class="navbar navbar-expand-sm bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/home.html">NATA-BA</a>
+       <a class="navbar-brand" href="/home.php">NATA-BA</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,8 +29,8 @@ include('verifica_login.php');
                   Reparo
                 </button>
                 <ul class="dropdown-menu dropdown-body-tertiary">
-                  <li><a class="dropdown-item" href="/formulario_triagem.html">Solicitar triagem</a></li>
-                  <li><a class="dropdown-item" href="/formulario_triagem.html">Consultar triagem</a></li>
+                  <li><a class="dropdown-item" href="/formulario_triagem.php">Solicitar triagem</a></li>
+                    <li><a class="dropdown-item" href="/consulta_triagem.php">Consultar triagem</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -59,7 +60,7 @@ include('verifica_login.php');
                 </ul>
               </li>
           </ul>
-          <button type="submit" class="btn btn-secondary"><a class="text-white text-decoration-none" href="/logout.php">Sair</a></button>
+          <button type="submit" class="btn btn-outline-secondary"><a class="text-black text-decoration-none" href="/logout.php">Sair</a></button>
           </form>
         </div>
       </div>

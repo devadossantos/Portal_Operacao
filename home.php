@@ -10,13 +10,14 @@ include('verifica_login.php');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portal NATA-BA - Home</title>
+        <link href="/_ico/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   </head>
   <body>
 <header class="cabecalho">
     <nav class="navbar navbar-expand-sm bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/home.html">NATA-BA</a>
+        <a class="navbar-brand" href="/home.php">NATA-BA</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,8 +28,9 @@ include('verifica_login.php');
                   Reparo
                 </button>
                 <ul class="dropdown-menu dropdown-body-tertiary">
-                  <li><a class="dropdown-item" href="/formulario_triagem.html">Solicitar triagem</a></li>
-                  <li><a class="dropdown-item" href="/formulario_triagem.html">Consultar triagem</a></li>
+                  <li><a class="dropdown-item" href="/formulario_triagem.php">Solicitar triagem</a></li>
+                  <li><a class="dropdown-item" href="/consulta_triagem.php">Consultar triagem</a></li>
+                    <li><a class="dropdown-item" href="/fila_triagem.php">Executar triagem (NATA)</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -58,7 +60,7 @@ include('verifica_login.php');
                 </ul>
               </li>
           </ul>
-          <button type="submit" class="btn btn-secondary"><a class="text-white text-decoration-none" href="/logout.php">Sair</a></button>
+          <button type="submit" class="btn btn-outline-secondary"><a class="text-black text-decoration-none" href="/logout.php">Sair</a></button>
           </form>
         </div>
       </div>
@@ -160,7 +162,7 @@ include('verifica_login.php');
 <footer class="text-center text-lg-start bg-light text-muted  fixed-bottom">
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     2023 Desenvolvido por:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">@Devadossantos</a>
+    <a class="text-reset fw-bold" href="https://github.com/devadossantos">@Devadossantos</a>
   </div>
 </footer>
 

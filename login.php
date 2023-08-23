@@ -26,10 +26,12 @@ if($row == 1){
 }
 else{
     $_SESSION['nao_autenticado'] = true;
-    header('Location: index.php');
+   echo '<script type="text/javascript">'; 
+    echo 'alert("Senha incorreta. Tente novamente.");'; 
+    echo 'window.location.href = "index.php";';
+    echo '</script>';
     exit();
 }
-
 
 
 

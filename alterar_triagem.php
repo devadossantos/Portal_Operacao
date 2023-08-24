@@ -59,29 +59,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Editar Dados</title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <h1>Editar Dados da Tabela Triagem</h1>
-    <form method="POST">
-        
-        <label for="especialista_responsavel">Especialista Responsável:</label>
-        <input type="text" id="especialista_responsavel" name="especialista_responsavel" required><br><br>
-
-        <label for="status">Status:</label>
-        <select id="status" name="status">
-            <option value="Em Andamento">Em Andamento</option>
-            <option value="Concluído">Concluído</option>
-            <option value="Pendente">Pendente</option>
-            <option value="Cancelado">Cancelado</option>
-        </select><br><br>
-
-        <label for="detalhes">Detalhes:</label><br>
-        <textarea id="detalhes" name="detalhes" rows="4" cols="50"></textarea><br><br>
-
-        <label for="observacao">Observação:</label><br>
-        <textarea id="observacao" name="observacao" rows="4" cols="50"></textarea><br><br>
-
-        <input type="submit" value="Salvar">
-    </form>
+    <div class="container">
+        <h1 class="mt-4 p-3 border text-center">Editar Dados da Tabela Triagem</h1>
+        <form method="POST">
+            <div class="form-row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="especialista_responsavel">Especialista Responsável:</label>
+                        <select class="form-control" id="especialista_responsavel" name="especialista_responsavel" required>
+                            <option value="ANISIO GUSTAVO">ANISIO GUSTAVO</option>
+                            <option value="MARCELO RODIGUES">MARCELO RODIGUES</option>
+                            <option value="HUGO LIMA">HUGO LIMA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="status">Status:</label>
+                        <select class="form-control" id="status" name="status">
+                            <option value="Em Andamento">Em Andamento</option>
+                            <option value="Concluído">Concluído</option>
+                            <option value="Pendente">Pendente</option>
+                            <option value="Cancelado">Cancelado</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="detalhes">Detalhes:</label>
+                        <select class="form-control" id="detalhes" name="detalhes">
+                            <option value="Inoperante">Inoperante</option>
+                            <option value="Perdas de pacote">Perdas de pacote</option>
+                            <option value="Latência">Latência</option>
+                            <option value="Alta utilização">Alta utilização</option>
+                            <option value="Massivo TRIA">Massivo tria</option>
+                            <option value="Massivo TXVT">Massivo txvt</option>
+                            <option value="Massivo COMUT">Massivo comut</option>
+                            <option value="Fibra de acesso">Fibra de acesso</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="data_triagem">Data da Triagem:</label>
+                        <input type="date" class="form-control" id="data_triagem" name="data_triagem">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="observacao">Observação:</label>
+                <textarea class="form-control" id="observacao" name="observacao" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="/home.php" class="btn btn-secondary">Voltar para pagina inicial</a>
+        </form>
+    </div>
 </body>
 </html>

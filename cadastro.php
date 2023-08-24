@@ -7,11 +7,12 @@
     <link href="/_ico/favicon.ico" rel="shortcut icon">
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>- NATA-BA - Criar usuário</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>NATA-BA - Cadastro de usuarios.</title>
 </head>
 <body>
         <div class="container mt-5 mx-auto">
-            <h1 class="text-center">Cadastro</h1>
+            <h1 class="text-center py-3 border">Cadastro de acesso.</h1>
                 <form method="post" action="salvarUser.php" class="border p-4 mx-auto">
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -35,6 +36,7 @@
                     </div>
                     <br>
                     <button type="submit" class="btn btn-primary" name="cadastrar">Cadastrar</button>
+                    <a href="/index.php" class="btn btn-outline-secondary">Voltar</a>
                 </form>
     </div>
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="/_ico/favicon.ico" rel="shortcut icon">
     <title>Alterar Senha</title>
-    <link rel="stylesheet" href="./_css/cadastro_esqueciasenha.css">
+     <link rel="stylesheet" href="/assets/css/style.css">
     
 </head>
 <body>

@@ -12,6 +12,7 @@ include('verifica_login.php');
     <title>Portal NATA-BA - Home</title>
         <link href="/_ico/favicon.ico" rel="shortcut icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+         <link rel="stylesheet" href="/assets/css/style.css">
   </head>
   <body>
 <header class="cabecalho">
